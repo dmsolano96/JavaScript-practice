@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<h1> BMI calculator </h1>
+<script>
+
+function jumpLine() {
+	document.write("<br>");
+	document.write("<br>");
+}
+	
+function print(argument) {
+	document.write(argument);
+	jumpLine();
+}
+
+function calculateBmi (weight, height){
+	
+
+	return (weight/(height*height));
+
+}
+
+
+name= prompt("Please, write your name here")
+weight= prompt("Please " + name + " write your weight here")
+height= prompt("Please " + name + " write your height here")
+bmiCalculated= calculateBmi(weight,height);
+
+print(name + ", your BMI calculated is: " + Math.round(bmiCalculated));
+
+
+if (bmiCalculated<18.5) {
+	print("Under weight");
+	alert("Under weight");
+
+}
+
+if (bmiCalculated>=18.5 && bmiCalculated<=24.9) {
+	print("Healty weight");
+	alert("Healty weight");
+}
+
+
+if (bmiCalculated>=25 && bmiCalculated<=29.9) {
+	print("Overweight");
+	alert("Under weight");
+}
+
+if (bmiCalculated>30) {
+	print("Obese");
+	alert("Under weight");
+}
+
+
+
+</script>
